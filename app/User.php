@@ -8,8 +8,7 @@ use Illuminate\Notifications\Notifiable;
 use App\Notifications\InvoicePaid;
 
 
-class User extends Authenticatable 
-//implements MustVerifyEmail
+class User extends Authenticatable implements MustVerifyEmail
 
 {
     use Notifiable;
