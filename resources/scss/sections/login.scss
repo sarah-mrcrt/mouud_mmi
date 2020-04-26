@@ -1,0 +1,195 @@
+.form-group {
+    margin: 1rem auto;
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+
+    .validate-input {
+        position: relative;
+
+        .form-control {
+            padding: 0 !important;
+        }
+
+        .account {
+            display: block;
+            width: 100%;
+            background: $white;
+            height: 3rem;
+            padding: 0 2rem 0 4rem !important;
+        }
+    }
+    .invalid-feedback {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        strong{
+            margin: auto;
+        }
+    }
+	.form-check {
+    -ms-flex-line-pack: center;
+        align-content: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+	.checkbox{
+		margin-right: 0.5rem;
+	}
+}
+}
+
+.symbol-account {
+    font-size: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-left: 35px;
+    pointer-events: none;
+    color: $grey;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+.account:focus+.symbol-account {
+    color: $orange;
+    padding-left: 28px;
+}
+
+
+///////////////////////////////////
+.checkbox {
+    --border: silver;
+    --border-hover: silver;
+    --border-active: #FF4600;
+    --tick: white;
+    position: relative;
+    input,
+    svg {
+        width: 21px;
+        height: 21px;
+        display: block;
+    }
+    input {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        position: relative;
+        outline: none;
+        background: $white;
+        border: none;
+        margin: 0;
+        padding: 0;
+        cursor: pointer;
+        border-radius: 4px;
+        -webkit-transition: -webkit-box-shadow .3s;
+        transition: -webkit-box-shadow .3s;
+        -o-transition: box-shadow .3s;
+        transition: box-shadow .3s;
+        transition: box-shadow .3s, -webkit-box-shadow .3s;
+        -webkit-box-shadow: inset 0 0 0 var(--s, 1px) var(--b, var(--border));
+                box-shadow: inset 0 0 0 var(--s, 1px) var(--b, var(--border));
+        &:hover {
+            --s: 2px;
+            --b: var(--border-hover);
+        }
+        &:checked {
+            --b: var(--border-active);
+        }
+    }
+    svg {
+        pointer-events: none;
+        fill: none;
+        stroke-width: 2px;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke: var(--stroke, var(--border-active));
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 21px;
+        height: 21px;
+        -webkit-transform: scale(var(--scale, 1)) translateZ(0);
+                transform: scale(var(--scale, 1)) translateZ(0);
+    }
+    &.path {
+        input {
+            &:checked {
+                --s: 2px;
+                -webkit-transition-delay: .4s;
+                     -o-transition-delay: .4s;
+                        transition-delay: .4s;
+                & + svg {
+                    --a: 16.1 86.12;
+                    --o: 102.22;
+                }
+            }
+        }
+        svg {
+            stroke-dasharray: var(--a, 86.12);
+            stroke-dashoffset: var(--o, 86.12);
+            -webkit-transition: stroke-dasharray .6s, stroke-dashoffset .6s;
+            -o-transition: stroke-dasharray .6s, stroke-dashoffset .6s;
+            transition: stroke-dasharray .6s, stroke-dashoffset .6s;
+        }
+    }
+    &.bounce {
+        --stroke: var(--tick);
+        input {
+            &:checked {
+                --s: 11px;
+                & + svg {
+                    -webkit-animation: bounce .4s linear forwards .2s;
+                            animation: bounce .4s linear forwards .2s;
+                }
+            }
+        }
+        svg {
+            --scale: 0;
+        }
+    }
+}
+
+@-webkit-keyframes bounce {
+    50% {
+        -webkit-transform: scale(1.2);
+                transform: scale(1.2);
+    }
+    75% {
+        -webkit-transform: scale(.9);
+                transform: scale(.9);
+    }
+    100% {
+        -webkit-transform: scale(1);
+                transform: scale(1);
+    }
+}
+
+@keyframes bounce {
+    50% {
+        -webkit-transform: scale(1.2);
+                transform: scale(1.2);
+    }
+    75% {
+        -webkit-transform: scale(.9);
+                transform: scale(.9);
+    }
+    100% {
+        -webkit-transform: scale(1);
+                transform: scale(1);
+    }
+}

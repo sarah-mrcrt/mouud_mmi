@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,SAAS,CACL,SAAS,CAAE,IAAI,CACf,eAAe,CAAE,MAAM,CAyG3B,aAAe,CACX,MAAM,CAAE,gBAAgB",
+"sources": ["../../../resources/scss/sections/song.scss"],
+"names": [],
+"file": "song.css"
+}

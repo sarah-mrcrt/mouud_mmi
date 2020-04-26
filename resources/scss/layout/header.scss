@@ -1,0 +1,133 @@
+.avatar_icon {
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+    background-color: $white;
+    -o-object-fit: cover;
+       object-fit: cover;
+}
+
+header {
+    position: relative;
+    width: 95%;
+    margin: auto;
+    margin-bottom: 3rem;
+
+    .navbar_guest {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        height: 5rem;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+
+        ul {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-pack: distribute;
+            justify-content: space-around;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+
+            li {
+                margin: 0 1rem;
+            }
+        }
+
+        .mouud_logo {
+            width: 5rem;
+        }
+    }
+
+    .navbar_login {
+        height: 5rem;
+        width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-line-pack: center;
+        align-content: center;
+
+        form {
+            margin-right: 3rem;
+        }
+
+        .avatar_icon {
+            margin: 0 1rem;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            left: -10rem;
+            top: 138%;
+            padding: 0;
+            background-color: $bluelight;
+            max-width: 15rem;
+            overflow: hidden;
+            a {
+                color: $white !important;
+            }
+            .notif_read {
+                background-color: $orange;
+                padding: 1rem;
+                text-align: center;
+                &:hover {
+                    color: $orange !important;
+                    background-color: $white !important;
+                }
+            }
+            .notif{
+                font-size: 0.6rem;
+                margin: 1rem 0;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                    -ms-flex-align: center;
+                        align-items: center;
+                -ms-flex-line-pack: center;
+                    align-content: center;
+                word-wrap: break-word;
+                &:hover {
+                    color: silver !important;
+                    background-color: transparent;
+                    font-weight: bold;
+                }
+                p{
+                    margin: 0;
+                    span{
+                        background-color: $orange !important;
+                        color: $white !important;
+                        padding: 0.1rem;
+                        text-align: right;
+                        border-radius: 5%;
+                        position: absolute;
+                        right: 8%;
+                    }
+                }
+                 .avatar_icon {
+                    width: 20%;
+                }
+            }
+            .dropdown-divider {
+                width: 2rem;
+                margin: auto;
+                opacity: 0.5;
+            }
+        }
+    }
+}

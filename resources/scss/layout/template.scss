@@ -1,0 +1,60 @@
+html {
+    height: 100%;
+    width: 100%;
+    font-size: 1rem;
+}
+
+body {
+    background-color: $bluedark !important;
+    color: $white !important;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-display: swap;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    -webkit-text-decoration-line: none;
+    text-decoration-line: none;
+    &:hover {
+        color: $orange;
+        -webkit-transition: 0.4s;
+        -o-transition: 0.4s;
+        transition: 0.4s;
+    }
+}
+
+ul,
+li {
+    list-style-type: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    -o-object-fit: contain;
+    object-fit: contain;
+}
+
+main {
+    position: relative;
+    margin-left: 6rem;
+    padding: 0rem 2rem;
+}
+
+.main_container {
+    margin-bottom: 10rem;
+}
+
+.background {
+    background-color: $bluelight;
+    -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    a:hover,
+    i:hover {
+        text-decoration: none !important;
+    }
+}

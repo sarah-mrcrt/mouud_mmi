@@ -1,0 +1,137 @@
+.chansons, .playlists {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    .songs {
+
+        a:hover,
+        i:hover {
+            text-decoration: none !important;
+            color: $bluedark !important;
+        }
+
+        position: relative;
+        color: $white;
+        font-size: 1.2rem;
+
+        .style {
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.699);
+            font-weight: bold;
+            top: 5%;
+            left: 10%;
+            border-radius: 5px;
+            font-size: 1rem;
+            color: black;
+            padding: 0.2rem 0.5rem;
+        }
+
+        a {
+            color: $white;
+        }
+
+        .album {
+            display: block;
+            -o-object-fit: cover;
+               object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .album_song {
+            width: 12rem;
+            height: 15rem;
+            .items{
+                max-width: 12rem;
+            }
+        }
+
+        .album_playlist {
+            width: 15rem;
+            height: 12rem;
+        }
+
+        .overlay {
+            background-color: $orange-50;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 0;
+            overflow: hidden;
+            -webkit-transition: all 0.5s ease;
+            -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+            border-radius: 5px;
+        }
+
+        .fa-play,
+        .fa-eye {
+            border-radius: 50%;
+            padding: 1.2rem;
+            color: $white;
+            font-size: 2.5rem;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                    transform: translate(-50%, -50%);
+        }
+
+        .like,
+        .addP {
+            position: absolute;
+            bottom: 10%;
+            border: none;
+            text-decoration: none;
+            background-color: transparent;
+            color: white;
+        }
+
+        .like {
+            left: 10%;
+        }
+
+        .addP {
+            right: 10%;
+            font-size: 1.4rem;
+        }
+
+        .fa-play:hover,
+        .fa-eye:hover {
+            background-color: transparent;
+        }
+    }
+
+    .songs:hover .overlay {
+        height: 100%;
+    }
+
+    .items {
+        height: 3rem;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        margin-top: 3%;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+
+        div>* {
+            display: block;
+        }
+        a:hover,
+        i:hover {
+            text-decoration: none !important;
+        }
+    }
+
+}
+
+.chansons>div {
+    margin: 0 2rem 3rem 2rem;
+}

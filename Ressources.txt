@@ -1,0 +1,9 @@
+## Copyright
+Copyright (c) 2020 - Sarah Mauriaucourt - Développement web
+
+## License (Ressources utilisées)
+Copyright (c) 2020 Camille Glaçon - Illustrations
+Copyright (c) Chris Wanstrath - Pjax
+Copyright (c) 2017 Toastr Maintainers - Toastr
+Copyright (c) 2020 - Aaron Iker - https://codepen.io/aaroniker/pen/PowZbgb
+Copyright (c) 2013 Bootsnipp.com - https://bootsnipp.com/nguyenchienbg2k

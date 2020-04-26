@@ -1,0 +1,34 @@
+//sass --watch resources/scss:public/css --style compressed
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Bootstrap
+// @import '~/bootstrap/scss/bootstrap';
+@import 'components/_variables.scss';
+@import 'components/toastr.scss';
+
+//Generic
+@import 'generic/reset.scss';
+@import 'generic/normalize.scss';
+
+//Layouts
+@import 'layout/template';
+@import 'layout/all';
+@import 'layout/sidebar';
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/responsive';
+@import 'layout/player';
+
+// Components
+@import 'components/_searchbar';
+@import 'components/button';
+
+//Sections
+@import 'sections/accueil';
+@import 'sections/login';
+@import 'sections/playlist';
+@import 'sections/profile';
+@import 'sections/search';
+@import 'sections/song';

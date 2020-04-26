@@ -1,0 +1,72 @@
+.btn{
+    border: solid 0.05rem;
+    border-radius: 1.2rem;
+    padding: 0.2rem 2.5rem;
+    color: $blanc;
+    &:hover{
+        color: $blanc;
+    }
+}
+
+// Orange
+.btn_bordureOrange{
+    color: $orange;
+    border-color: $orange !important;
+    font-weight: bold !important;
+    &:hover{
+        border-color: $white !important;
+    }
+}
+
+.btn_fondOrange{
+    border-color: $orange;
+    background-color: $orange;
+    font-weight: bold !important;
+    &:hover{
+        color: $orange;
+        background-color: $blanc;
+    }
+}
+
+// Bleu
+.btn_fondBleu{
+    background-color: $bleu;
+    border-color: $bleu;
+    font-weight: bold !important;
+    &:hover{
+        color: $bleu;
+        background-color: $blanc;
+    }
+}
+
+// Rouge
+.btn_danger{
+    background-color: $red !important;
+    color: $white !important;
+    &:hover{
+        background-color: $white !important;
+        color: $red !important;
+        border-color: $red !important;
+    }
+}
+
+// Grey
+.btn_antiDanger{
+    background-color: $grey !important;
+    color: $white !important;
+    &:hover{
+        background-color: $white !important;
+        color: $grey !important;
+        border-color: $grey !important;
+    }
+}
+
+// Trucs
+.linkOrange_hover {
+    color: white !important;
+    text-decoration: none !important;
+
+    &:hover {
+        color: $orange !important;
+    }
+}

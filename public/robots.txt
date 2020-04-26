@@ -1,0 +1,13 @@
+# Groupe 1
+User-agent: *
+Allow: /
+# Groupe 2
+User-agent: Googlebot-Image
+Disallow: /*.jpg$
+Disallow: /*.jpeg$
+Disallow: /*.png$
+Disallow: /*.gif$
+Disallow: /*.svg$
+Disallow: /*.pdf$
+Disallow: /images/
+Disallow: / 

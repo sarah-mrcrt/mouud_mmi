@@ -1,0 +1,47 @@
+.search-bar {
+    position: relative;
+    input, button{
+        border: none;
+    }
+    input[type=search] {
+        width: 10rem;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+        border-bottom: 2px solid $white;
+        font-size: 16px;
+        background-color: $bluedark;
+        padding: 0.5rem 1rem;
+        -webkit-transition: width 0.5s ease;
+        -o-transition: width 0.5s ease;
+        transition: width 0.5s ease;
+        color: $orange;
+    }
+    input[type=search]:focus {
+        width: 18rem;
+        color: $white;
+    }
+    button{
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        color: $white;
+        background-color: transparent;
+        margin-right: 1rem;
+    }
+    ::-webkit-input-placeholder {
+        color: silver;
+    }
+    ::-moz-placeholder {
+        color: silver;
+    }
+    :-ms-input-placeholder {
+        color: silver;
+    }
+    ::-ms-input-placeholder {
+        color: silver;
+    }
+    ::placeholder {
+        color: silver;
+    }
+}

@@ -1,0 +1,60 @@
+.search {
+    .serach_users {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+
+        div {
+            margin: 0 1rem 3rem 1rem;
+        }
+    }
+
+    .users_profile {
+        padding: 1rem 1rem;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -ms-flex-line-pack: center;
+            align-content: center;
+        width: 20rem;
+        text-align: center;
+
+        div {
+            margin: 0 0.4rem;
+            width: 50%;
+            text-align: center;
+        }
+        .avatar_search {
+            width: 6.2rem;
+            height: 6.2rem;
+            border-radius: 50%;
+            background-color: #fff;
+            -o-object-fit: cover;
+               object-fit: cover;
+        }
+    }
+
+    .search_sidebar {
+        -o-text-overflow: ellipsis;
+           text-overflow: ellipsis;
+        overflow: hidden;
+        padding: 1rem 2rem;
+        -ms-flex-negative: 0;
+            flex-shrink: 0;
+        min-width: 20rem;
+        max-height: 10rem;
+        text-align: center;
+        display: block;
+    }
+}

@@ -1,0 +1,113 @@
+h1 {
+    text-align: center;
+    font-weight: bold !important;
+    margin-bottom: 2rem !important;
+}
+
+h2 {
+    font-weight: bold;
+}
+
+h5 {
+    position: absolute;
+    top: 3%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.artiste {
+    color: $white !important;
+
+    &:hover {
+        color: silver !important;
+    }
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+    background-color: transparent !important;
+    font-weight: bold;
+    border-left: 1rem solid $orange;
+    color: $orange !important;
+}
+
+.modal-header {
+    text-align: center;
+}
+
+.modal-header,
+.close {
+    background-color: $orange;
+    color: white !important;
+    padding: 1rem 0;
+}
+
+.modal-content {
+    color: black;
+
+    .check {
+        color: black !important;
+    }
+}
+
+.error_404 {
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+
+    img {
+        max-width: 20rem;
+        margin: 0 0 2rem 0;
+    }
+}
+
+
+.select_style select{
+    display: block;
+    background-color: $white;
+    color: $grey;
+    border: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    outline: none;
+    padding: 0.5em 2em 0.5em 0.5em;
+    // background-repeat: no-repeat;
+    // background-image: -o-linear-gradient(45deg, transparent 50%, currentColor 50%), -o-linear-gradient(315deg, currentColor 50%, transparent 50%), -o-linear-gradient(45deg, transparent 50%, currentColor 50%);
+    // background-image: linear-gradient(45deg, transparent 50%, currentColor 50%), linear-gradient(135deg, currentColor 50%, transparent 50%), linear-gradient(45deg, transparent 50%, currentColor 50%);
+    // background-position: right 15px top 1em, right 10px top 1em;
+    // background-size: 6px 5px, 5px 5px;
+    option {
+        background: $white;
+        color: black;
+        position: absolute;
+    }
+    option:hover::after {
+    background-color: rgba(0, 0, 0, 0.1);
+    }
+}
+
+select:hover, select:active {
+    background-color: $white;
+    color: $orange;
+    -webkit-transition: 0.4s;
+        -o-transition: 0.4s;
+        transition: 0.4s;
+}
+
+// .modal-backdrop {
+//     display: none;
+// }
