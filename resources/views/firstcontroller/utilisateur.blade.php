@@ -118,7 +118,7 @@
 
         <div class="tab-pane fade search" id="followersTabs" role="tabpanel" aria-labelledby="followersTabs-tab">
             <div class="serach_users">
-                @foreach(Auth::user()->followers as $follower)
+                @foreach($utilisateur->followers as $follower)
                 <div class="users_profile background">
                     <div>
                         <a data-pjax href="/utilisateur/{{ $follower->id }}">
@@ -136,7 +136,7 @@
 
         <div class="tab-pane fade search" id="followingsTabs" role="tabpanel" aria-labelledby="followingsTabs-tab">
         <div class="serach_users">
-                @foreach(Auth::user()->followings as $following)
+                @foreach($utilisateur->followings as $following)
                 <div class="users_profile background">
                     <div>
                         <a data-pjax href="/utilisateur/{{ $following->id }}">

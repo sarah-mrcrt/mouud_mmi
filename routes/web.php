@@ -29,53 +29,53 @@ Route::get('/', 'FirstController@index');
 //Connexion
 Route::get('/home', 'FirstController@index');
 //Page d'un utlisateur
-Route::get('/utilisateur/{id}', 'FirstController@utilistateur')->where('id','[0-9]+')->middleware('verified')->middleware('auth');
+Route::get('/utilisateur/{id}', 'FirstController@utilistateur')->where('id','[0-9]+')->middleware('auth');
 //Modifier un avatar
-Route::post('/update/utilisateur/{id}','FirstController@updateAvatar')->where('id','[0-9]+')->middleware('verified')->middleware('auth');
+Route::post('/update/utilisateur/{id}','FirstController@updateAvatar')->where('id','[0-9]+')->middleware('auth');
 //Supprimer son compte
-Route::get('/delete/utilisateur/{id}','FirstController@deleteUtilisateur')->where('id','[0-9]+')->middleware('verified')->middleware('auth');
+Route::get('/delete/utilisateur/{id}','FirstController@deleteUtilisateur')->where('id','[0-9]+')->middleware('auth');
 
 
 //*************** CHANSONS *************** //
-Route::get('/chanson/nouvelle', 'FirstController@nouvellechanson')->middleware('verified')->middleware('auth');
+Route::get('/chanson/nouvelle', 'FirstController@nouvellechanson')->middleware('auth');
 //Creer une nouvelle chanson, Method POST, donc je ne peux pas l'écrire dans l'url
 //Si je suis Conncté, aller sur la page de celle-ci. Sinon, je demande la connexion
-Route::post('/chanson/create', 'FirstController@creerchanson')->name('nouvelle')->middleware('verified')->middleware('auth');
+Route::post('/chanson/create', 'FirstController@creerchanson')->name('nouvelle')->middleware('auth');
 //Supprimer une chanson
-Route::get('/delete/chanson/{idChanson}','FirstController@deleteChanson')->where('id','[0-9]+')->middleware('verified')->middleware('auth');
+Route::get('/delete/chanson/{idChanson}','FirstController@deleteChanson')->where('id','[0-9]+')->middleware('auth');
 
 
 //*************** PLAYLISTS *************** //
 //Afficher playlist
-Route::get('/playlist/nouvelle', 'FirstController@nouvellePlaylist')->middleware('verified')->middleware('auth');
+Route::get('/playlist/nouvelle', 'FirstController@nouvellePlaylist')->middleware('auth');
 //Creer playlists
-Route::post('/playlist/create', 'FirstController@creerPlaylist')->middleware('verified')->middleware('auth');
+Route::post('/playlist/create', 'FirstController@creerPlaylist')->middleware('auth');
 //Voir les musiques d'une playlist
 //Ajouter playlists
-Route::get('/ajouterPlaylist/{idPlaylist}/{idChanson}', 'FirstController@addPlaylist')->where('id','[0-9]+')->middleware('verified')->middleware('auth');
+Route::get('/ajouterPlaylist/{idPlaylist}/{idChanson}', 'FirstController@addPlaylist')->where('id','[0-9]+')->middleware('auth');
 //Supprimer playlist
-Route::get('/delete/playlist/{idPlaylist}','FirstController@deletePlaylist')->where('id','[0-9]+')->middleware('verified')->middleware('auth');
+Route::get('/delete/playlist/{idPlaylist}','FirstController@deletePlaylist')->where('id','[0-9]+')->middleware('auth');
 //Retirer une chanson de la playlist
-Route::get('/delete/chanson/playlist/{idPlaylist}/{idChanson}', 'FirstController@deleteChansonFromPlaylist')->where('id','[0-9]+')->middleware('verified')->middleware('auth');
+Route::get('/delete/chanson/playlist/{idPlaylist}/{idChanson}', 'FirstController@deleteChansonFromPlaylist')->where('id','[0-9]+')->middleware('auth');
 // Afficher page playlist avec ses
-Route::get('/playlist/{idPlaylist}', 'FirstController@Playlist')->where('id','[0-9]+')->middleware('verified')->middleware('auth');
+Route::get('/playlist/{idPlaylist}', 'FirstController@Playlist')->where('id','[0-9]+')->middleware('auth');
 
 //*************** Formulaire de recherche *************** //
-Route::get('/recherche/{parametre}','FirstController@recherche')->middleware('verified')->middleware('auth');
+Route::get('/recherche/{parametre}','FirstController@recherche')->middleware('auth');
 
 
 //*************** Suivre qq1 *************** //
-Route::get('/suivre/{id}', 'FirstController@suivre')->where('id','[0-9]+')->middleware('verified')->middleware('auth');
+Route::get('/suivre/{id}', 'FirstController@suivre')->where('id','[0-9]+')->middleware('auth');
 
 
 //*************** Like *************** //
-Route::get('/like/{idChanson}', 'FirstController@like')->name('like')->where('idChanson','[0-9]+')->middleware('verified')->middleware('auth');
+Route::get('/like/{idChanson}', 'FirstController@like')->name('like')->where('idChanson','[0-9]+')->middleware('auth');
 
 //*************** Notification *************** //
 // Notification a été vu
-Route::get('/markAsRead','FirstController@markAsRead')->name('markRead')->middleware('verified')->middleware('auth');
+Route::get('/markAsRead','FirstController@markAsRead')->name('markRead')->middleware('auth');
 
 
-// Auth::routes();
-Auth::routes(['verify' => true]);
+Auth::routes();
+// Auth::routes(['verify' => true]);
 //->middleware('verified')

@@ -81,7 +81,8 @@
                                 <img class="avatar_icon" src="/uploads/avatars/{{Auth::user()->avatar}}"
                                     alt="avatar_{{Auth::user()->id}}" />
                                 <div>
-                                    <p><b>{{$notification->data['user_name']}}</b>
+                                    <p>You
+                                        {{-- <b>{{$notification->data['user_name']}}</b> --}}
                                         <span>
                                             {{$notification->created_at->format('H:i')}}</span></p>
                                     <span>liked a song

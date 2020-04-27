@@ -4,6 +4,11 @@ $(document).on('submit', 'form[data-pjax]', function(event) {
   $.pjax.submit(event, '#pjax-container')
 })
 
+$('.modal-backdrop').remove()
+$('.modal-backdrop').modal('hide')
+$ (document.body) .removeClass ("modal-open");
+
+
  $(document).ready(function () {
      // AUDIO
      $('body').on('click', '.chanson', function (event) {

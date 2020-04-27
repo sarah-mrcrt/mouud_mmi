@@ -21,15 +21,15 @@
 </section>
 @endguest
 @auth
-@if(Auth::user()->email_verified_at == NULL)
+{{-- @if(Auth::user()->email_verified_at == NULL)
 @include('auth.verify')
-@else
+@else --}}
 <section class="main_container">
     <h1 class="section_name" id="featured">Featured</h1>
     @include('firstcontroller._chansons')
     @include('firstcontroller._playlists')
 </section>
-@endif
+{{-- @endif --}}
 @endauth
 
 @endsection
