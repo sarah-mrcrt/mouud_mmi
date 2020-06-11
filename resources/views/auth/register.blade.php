@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-6 background">
             <div class="text-center">
-                <h3 class="card-header">{{ __('Register') }}</div>
+                <h3 class="card-header">{{ __('Register') }}</h3>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
@@ -41,6 +41,7 @@
                                         <i class="fa fa-envelope" aria-hidden="true"></i>
                                     </span>
                                 </div>
+							  	<span class="invalid-feedback" role="alert"> A valid email is required</span>
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>

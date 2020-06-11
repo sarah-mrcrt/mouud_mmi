@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" xmlns:og='http://ogp.me/ns#'>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" xmlns:og='http://ogp.me/ns#' dir="ltr">
 
 <head>
     <!-- CSRF Token -->
@@ -11,21 +11,21 @@
     <meta name='apple-mobile-web-app-capable' content='yes' />
     <!-- Référencement -->
     <title>@yield('Title')Mouud</title>
-    <meta name="icon" content="{{ asset('mouud.ico')}}"/>
+    <meta name="icon" content="{{ asset('mouud.ico')}}" />
     <meta name="description" content="@yield('Description')">
-    <link rel="icon" type="image/png" href="/public/icon/xandroid-icon-192x192.png.pagespeed.ic.obgqgII-gM.webp"/>
-    <meta name="keywords" content="mouud, music, song, playlist, soundcloud, spotify, streaming">
-    <meta name="copyright" content="© Sarah Mauriaucourt"/>
-    <meta name="robots" content="index, follow, archive"/>
+    <link rel="icon" type="image/png" href="{{ asset('mouud.ico')}}" />
+    <meta name="keywords" content="mouud, music, song, playlist, soundcloud, spotify, streaming, mmi">
+    <meta name="copyright" content="© Sarah Mauriaucourt" />
+    <meta name="robots" content="index, follow, archive" />
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#ffffff">
     <!-- RS !-->
-    <meta property="og:type" content="website"/>
-    <meta property="og:site_name" content="Mouud"/>
-    <meta property="og:url" content="http://mouud.sarahmauriaucourt.fr"/>
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Mouud" />
+    <meta property="og:url" content="http://mouud.sarahmauriaucourt.fr" />
     <meta property="og:title" content="@yield('Title')Mouud">
     <meta property="og:description" content="@yield('Description')">
-    <meta property="og:locale" content="fr_FR"/>
+    <meta property="og:locale" content="fr_FR" />
     <!-- Favicon -->
     <link href="{{ asset('mouud.ico')}}" rel="shortcut icon" />
     <!-- Stylesheets -->
@@ -33,15 +33,34 @@
     <link rel="stylesheet" href="{{ asset('css/app.css')}}" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Données structurées !-->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Project",
+            "name": "Mouud",
+            "alternateName": "Mouud",
+            "url": "http://mouud.sarahmauriaucourt.fr/",
+            "logo": "http://mouud.sarahmauriaucourt.fr/logo.png",
+            "sameAs": [
+                "https://sarahmauriaucourt.fr/",
+                "https://www.linkedin.com/in/sarah-m-067726180",
+                "https://www.youtube.com/channel/UCF7FwMyNoiMXHSgioSrgw5w",
+                "https://www.instagram.com/sarahmrcrt_photo/",
+                "https://github.com/sarah-mrcrt",
+                "https://www.pinterest.fr/sarahmrcrt/",
+            ]
+        }
+    </script>
 </head>
 
 <body>
-    <header class="header-section">
+    <header class="header-section" itemscope itemtype="http://schema.org/Service">
         <nav class="navbar_guest">
             @guest
             <a data-pjax href="/">
-                <img style="filter: invert(100%);" data-pjax class="mouud_logo" src="/logo.png" />
+                <img itemprop="logo" style="filter: invert(100%);" data-pjax class="mouud_logo" src="/logo.png" />
             </a>
             <ul>
                 <li class="nav-item">
@@ -55,7 +74,7 @@
             </ul>
         </nav>
         @else
-        <nav class="navbar navbar-expand-lg navbar_login">
+        <nav class="navbar navbar-expand-lg navbar_login" id="search-container">
             <form class="search-bar" data-pjax id="search">
                 <input class="search-bar" name="search" type="search" required placeholder="Search" />
                 <button class="search-btn linkOrange_hover" type="submit"><i class="fas fa-search"></i></button>
@@ -75,9 +94,11 @@
                             @endif
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item btn notif_read" href="{{route('markRead')}}" data-pjax-toggle><b>Notifications read</b></a>
+                            <a class="dropdown-item btn notif_read" href="{{route('markRead')}}"
+                                data-pjax-toggle><b>Notifications read</b></a>
                             @foreach (Auth::user()->unReadNotifications as $notification)
-                            <a data-pjax class="dropdown-item notif" href="/utilisateur/{{$notification->data['user_id']}}">
+                            <a data-pjax class="dropdown-item notif"
+                                href="/utilisateur/{{$notification->data['user_id']}}">
                                 <img class="avatar_icon" src="/uploads/avatars/{{Auth::user()->avatar}}"
                                     alt="avatar_{{Auth::user()->id}}" />
                                 <div>
@@ -94,6 +115,7 @@
                             @endforeach
                         </div>
                     </li>
+                </ul>
             </div>
             <a data-pjax href="/utilisateur/{{Auth::id()}}">
                 <img class="avatar_icon" src="/uploads/avatars/{{Auth::user()->avatar}}" alt="avatar" />
@@ -107,7 +129,7 @@
         <ul class="sidebar-nav">
             <li class="logo">
                 <a href="/" class="linkOrange_hover sidebar-nav-link" data-pjax>
-                    <img style="filter: invert(100%);" class="mouud_logo" src="/logo.png" /></i></a>
+                    <img style="filter: invert(100%);" class="mouud_logo" src="/logo.png" /></a>
             </li>
             <li class="sidebar-nav-item">
                 <a href="{{ asset('/') }}" class="linkOrange_hover sidebar-nav-link" data-pjax>
@@ -143,9 +165,7 @@
     <main id="pjax-container">
         @yield('content')
     </main>
-
     @auth
-    
     <footer class="footer-section text-center">
         <audio id="audio" controls></audio>
     </footer>
@@ -157,19 +177,7 @@
     <script src="{{ asset('js/divers.js') }}"></script>
     <script src="{{ asset('js/toastr-min.js') }}"></script>
     {{-- <script src="{{ asset('js/autoplayer.js') }}"></script> --}}
-    <script type="text/javascript">
-        $("#search").submit(function (e) {
-            e.preventDefault();
-            console.log($.support.pjax);
-            if ($.support.pjax)
-                $.pjax({
-                    url: "/recherche/" + e.target.elements[0].value,
-                    container: '#pjax-container'
-                });
-            else
-                window.location.href = "/recherche/" + e.target.elements[0].value;
-        });
-    </script>
     <script src="{{ asset('js/bootstrap.min.js') }}"></script>
 </body>
+
 </html>

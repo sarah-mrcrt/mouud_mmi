@@ -4,8 +4,7 @@
     <div class="row justify-content-center align-self-center">
         <div class="col-md-6 background">
             <div class="text-center">
-                <h3 class="card-header">{{ __('Create a playlist') }}
-            </div>
+                <h3 class="card-header">{{ __('Create a playlist') }}</h3>
             <div class="card-body">
                 <form action="/playlist/create" data-pjax class="md-form" enctype="multipart/form-data" method="post">
                     @csrf

@@ -41,7 +41,6 @@
                 <img class="avatar_image" src="/uploads/avatars/{{$utilisateur->avatar}}"
                     alt="avatar_{{$utilisateur->name}}" />
             </div>
-            </button>
             @endif
         </div>
 

@@ -6,7 +6,7 @@
     <div class="row justify-content-center align-self-center">
         <div class="col-md-6 background">
             <div class="text-center">
-                <h3 class="card-header">{{ __('Upload a song') }}
+                <h3 class="card-header">{{ __('Upload a song') }}</h3>
             </div>
             <div class="card-body">
                 <form action="/chanson/create" data-pjax class="md-form" method="post" enctype="multipart/form-data">
@@ -49,7 +49,7 @@
                                 <option value="Rap">Rap</option>
                                 <option value="Reggae">Reggae</option>
                                 <option value="Rock">Rock</option>
-                                <option value="R&B">R&B</option>
+                                <option value="R&B">R&amp;B</option>
                                 <option value="Soul">Soul</option>
                                 <option value="World">World</option>
                             </select>
@@ -60,6 +60,7 @@
                                 onclick="window.location='/'" />
                             <input class="btn btn_fondOrange" type="submit" name="submit" value="Save" />
                         </div>
+                    </div>
                 </form>
 
                 @if ($errors->any())
@@ -75,8 +76,4 @@
         </div>
     </div>
 </div>
-</div>
-
-
-
 @endsection

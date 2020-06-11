@@ -12,7 +12,7 @@
                     data-pjax><b>{{$playlist->utilisateur->name}}</b></a>
             </span>
             @if($playlist->utilisateur->id == Auth::id())
-            <a data-pjax class="btn btn_danger" href="/delete/playlist/{{$playlist->id}}">Delete playlist</a>
+            <a data-pjax-toggle class="btn btn_danger" href="/delete/playlist/{{$playlist->id}}">Delete playlist</a>
             @endif
         </div>
     </div>

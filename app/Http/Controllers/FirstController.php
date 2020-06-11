@@ -58,7 +58,7 @@ class FirstController extends Controller {
             $utilisateur->avatar = $filename;
             $utilisateur->save();
         }
-        return redirect()->back();
+        return redirect()->back()->with('toastr', ['statut' => 'success', 'message' => 'Modified avatar']);
     }
     public function deleteUtilisateur($id) {
         $utilisateur=User::findOrFail($id);
@@ -177,7 +177,7 @@ class FirstController extends Controller {
             abort(403);
         }
         $playlist->chansons()->detach($idChanson);
-        return redirect()->back()->with('toastr', ['statut' => 'success', 'message' => $chanson->nom . ' deleted from the playlist']);
+        return redirect()->back()->with('toastr', ['statut' => 'success', 'message' => 'Song deleted from the playlist']);
     }
     public function deletePlaylist($idPlaylist){
         $playlist=Playlist::findOrFail($idPlaylist);
